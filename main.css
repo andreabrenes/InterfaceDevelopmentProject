@@ -1,0 +1,330 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+
+div.container
+{
+  font-family: Lato;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  font: 15px Lato;
+}
+
+div.menu
+{
+  font-family: Raleway;
+  margin: 1 auto;
+  padding: 0em 1em 2em;
+  text-align: right;
+}
+
+div.menu a
+{
+    color: #000;
+    text-decoration: none;
+    font: 15px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+div.spacehalf
+{
+    width: 50vw;
+}
+
+
+/* Top and Bottom borders go out */
+div.topBotomBordersOut a:before, div.topBotomBordersOut a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background: #000000;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersOut a:before
+{
+    top: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after
+{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/*Header*/
+header {
+  color: #000000;
+  text-align: center;
+  padding: 30px 0 20px;
+}
+
+h1 {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 0.5;
+  padding-top: 50px;
+  padding-left: 4px;
+  font-family: "Montserrat", sans-serif;
+}
+
+span {
+  text-transform: uppercase;
+  letter-spacing: 2.15px;
+  font-size: 10px;
+  line-height: 1;
+    
+}
+
+
+
+h2 {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 0.5;
+  padding-top: 50px;
+  padding-left: 4px;
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 0.5;
+  padding-top: 0px;
+  padding-left: 4px;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+p2 {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 0px;
+    line-height: 1;
+    padding-top: 30px;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+bold {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0px;
+    line-height: 1;
+    padding-top: 30px;
+    padding-left: 4px;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+bold2 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0px;
+    line-height: 1;
+    padding-top: 30px;
+    padding-left: 4px;
+    font-family: "Montserrat", sans-serif;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+/*GALLERY*/
+
+{
+  box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 100%;
+    padding: 0;
+    background-color: #000000;
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 0;
+	overflow: hidden;
+}
+
+/* Clearfix (clear floats) */
+row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 200ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+	opacity: 50%;
+}
+
+    
+    @media screen and (max-width: 1000px) {
+  .column {
+    width: 100%;
+  }
+}
+
+@supports (display: grid) {
+	.row {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+	}
+
+	.row,
+	.column {
+		margin: 100;
+	}
+}
+
+
+/*Projects*/
+
+.ProjectImage{
+    text-align:center;
+}
+
+
+/*About me*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 10px;
+}
+.grid-item {
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 20px;
+  font-size: 10px;
+  text-align: left;
+}
+
+.aboutPicture {
+    width: 100%;
+}
+
+/* Form */
+
+input[type=text], select, textarea {
+  font-family: "Montserrat", sans-serif;    
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+label {
+    font-family: "Montserrat", sans-serif;
+}
+
+input[type=submit] {
+  background-color: #AB74B4;
+  color: white;
+  padding: 8px 50px;
+  border: none;
+  border-radius: 200px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #9458B0;
+}
+
+.buttonRight {
+    text-align: right;
+}
+
+.container2 {
+  border-radius: 5px;;
+  padding: 0px 20px 0px 0px;
+}
+    
+    /* Principal */
+
+
+
+.titleP{
+font-family: Lato;
+  margin: 0px 10px;
+  padding: 15% 35% 0% 35%;
+  font: 15px Lato;
+    
+}
+
+
+.buttonRightP{
+  text-align: center;
+    margin:auto;
+    padding: 0% 40% 0% 40%;
+}
+
+
+
+/* Grid for social media */
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 125px 125px 125px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+.grid-item2 {
+    font-size: 0px;
+    text-align: left;
+}
+
+.grid-item2:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+
+
+
+    
+    
